@@ -1,6 +1,5 @@
 # React + Vite (Blog Project)
 Here are some creative blog name ideas:
-```c
 ### General Themes
 1. **The Curious Mind**
 2. **Wanderlust Words**
