@@ -1,5 +1,11 @@
+import BlogLink from "../AllNavLink/AppLink/BlogLink.jsx/BlogLink";
+
 const Blog = () => {
-  return <div>Blog</div>;
+  return (
+    <div>
+      <BlogLink />
+    </div>
+  );
 };
 
 export default Blog;
