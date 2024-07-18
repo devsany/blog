@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const MainLink = () => {
+const LoginNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,13 +9,8 @@ const MainLink = () => {
   };
   return (
     <div>
-      <header className="bg-gray-800 text-white">
+      <header className="bg-gray-400 text-blue-900  x">
         <div className="container mx-auto flex justify-between items-center p-4">
-          <div className="text-xl font-bold">
-            <a href="#" className="hover:text-gray-300">
-              Logo
-            </a>
-          </div>
           <nav>
             <ul
               className={`md:flex space-x-8 ${
@@ -23,10 +18,24 @@ const MainLink = () => {
               } md:block`}
             >
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/login/general_theme">General Theam</NavLink>
               </li>
               <li>
-                <NavLink to="/blog">Blog</NavLink>
+                <NavLink to="/login/tech_&_Program">Tech & Program</NavLink>
+              </li>
+              <li>
+                <NavLink to="/login/travel">Travel</NavLink>
+              </li>
+              <li>
+                <NavLink to="/login/lifestyle">Lifestyle</NavLink>
+              </li>
+              <li>
+                <NavLink to="/login/personal_Development">
+                  Personal Development
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/login/creative_Writing">Creative Writing</NavLink>
               </li>
             </ul>
             <div className="md:hidden">
@@ -52,7 +61,7 @@ const MainLink = () => {
               href="#"
               className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
             >
-              <NavLink to="/login">Login for adimn</NavLink>
+              <NavLink to="/">Admin logout</NavLink>
             </a>
           </div>
         </div>
@@ -60,8 +69,14 @@ const MainLink = () => {
         {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
           <ul className="bg-gray-800">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/login/general_theme">General Theam</NavLink>
+            <NavLink to="/login/tech_&_Program">Tech & Program</NavLink>
+            <NavLink to="/login/travel">Travel</NavLink>
+            <NavLink to="/login/lifestyle">Lifestyle</NavLink>
+            <NavLink to="/login/personal_Development">
+              Personal Development
+            </NavLink>
+            <NavLink to="/login/creative_Writing">Creative Writing</NavLink>
           </ul>
         </div>
       </header>
@@ -77,4 +92,4 @@ const MainLink = () => {
   );
 };
 
-export default MainLink;
+export default LoginNavBar;
